@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Blatant';
+  src: local('Blatant'), url('./fonts//subset-Blatant-Regular.ttf') format('truetype');
+}
+
+body {
+  background-image: url(./images/background.jpg);
+  background-repeat: no-repeat;
+  font-family: Blatant;
+  .Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      padding: 10px;
+      border: 1px solid white;
+      background-color: black;
+      border-radius: 5px;
+      &:hover {
+        background-color: blue;
+        color: white;
+      }
+    }
+  }  
+
+  .players_compare {
+    text-align: center;
+    
+    .inputs {
+      position: relative;
+      top: 700px;
+      input[type="text"] {
+        padding: 10px;
+        font-size: 19px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 15px;
+        width: 150px;
+        
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+        }
+      }
+      &.hide {
+        display: none;
+      }
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #0069d9;
+      }
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  
+    img {
+      max-width: 400px;
+      margin-top: 1rem;
+    }
+    .player1, .player2 {
+      position: absolute;
+      img {
+        border-bottom: 3px solid white;
+      }
+    }
+    .statistics {
+      background-color: rgba(0, 0, 0, 1);
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      top: 416px;
+      border-radius: 10px;
+      width: 400px;
+      height: 300px;
+      p {
+        text-align: center;
+        position: relative;
+        top: 10px;
+        height: 75px;
+        font-size: 20px;
+      }
+    }
+    .player1 {
+      left: 10px;
+      top: 346px;
+      left: 220px;
+    }
+    .player2 {
+      right: 220px;
+      top: 346px;
+    }
+  }
+}
